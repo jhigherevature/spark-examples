@@ -1,0 +1,24 @@
+p {
+    background-color: aquamarine;
+    color: purple;
+    font-size: 24pt;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+div {
+    background-color: crimson;
+    color: goldenrod;
+    font-size: 15pt;
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
+
+#p-1 {
+    font-size: 36pt;
+    color: brown;
+}
+
+.green-text {
+    color: darkgreen;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}

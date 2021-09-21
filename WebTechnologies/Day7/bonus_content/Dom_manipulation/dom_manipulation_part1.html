@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Manpiulation - Part 1</title>
+</head>
+<body>
+    <p id="Example">This is a paragraph. It has an Id of 'Example'</p>
+    <p id="Example">This is a paragraph. It has an Id of 'Example'</p>
+    <p id="Example">This is a paragraph. It has an Id of 'Example'</p>
+
+    <p class="Example">This is a paragraph. It has a Class of 'Example'</p>
+    <p class="Example">This is a paragraph. It has a Class of 'Example'</p>
+    <p class="Example">This is a paragraph. It has a Class of 'Example'</p>
+
+    <ol>
+        <li>Item one</li>
+        <li>Item two</li>
+        <li>Item three</li>
+    </ol>
+</body>
+
+<!--
+    DOM Manipulation is the process of referencing elements on a connected HTML page by treating the webpage as a collection of objects (Recall that DOM stands for: Document OBJECT model)
+        -Document : Reference to the HTML document
+        -Object : A construct that holds only multiple values using key-value pairs
+        -Model : A way to view/represent information
+
+    The easiest way to reference an element is to add the ID attribute to an element and reference that value.
+
+    Keep in mind that Id's should be unique to a single element...If multiple elements have the same ID, then the function will only reference the first element found with that particular ID.
+
+    ***One thing to keep in mind If we use DOM Manipulation, we should put our Script reference below our Body element. This is because our webpage loaded from top to bottom, and we want to ensure that all elements have loaded before we try to reference them. As such, the script element should come near the bottom of the html file.***
+-->
+<script src="dom_manip_part1.js">
+
+</script>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Box Model</title>
+    <style>
+        div {
+            background-color: aqua;
+        }
+
+        p {
+            background-color: orange;
+            /*
+                You can independently change the size of box model properties sides by supplying a number of dimensions:
+                if you supply:
+                    1 dimension - all 4 sides
+                    2 dimensions - first = top and bottom | second= left and right
+                    3 dimensions - first = top | second = left and right | third = bottom
+                    4 dimentions - first = top | second = right | third = bottom | fourth = left
+            */
+            border-width: 5px 50px 100px 500px;
+            border-style: solid;
+            border-color: darkred;
+            padding: 50px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        This is the Div
+        
+        <p>
+            This paragraph shows off the Box Model
+        </p>
+        
+        This is the Div
+    </div>
+</body>
+</html>

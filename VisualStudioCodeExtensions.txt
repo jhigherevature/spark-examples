@@ -1,0 +1,6 @@
+Some useful extensions for Visual Studio Code:
+
+-HTML CSS Support - General purpose support tool which provides additional intellisense options for HTML and CSS, including HTML boilerplate code
+-CSS Formatter - Allows for you to automatically format CSS code using the keyboard shortcut: ALT + SHIFT + F
+-HTML Preview - Allows you to view your HTML code from within Visual Studio Code using the keyboard shortcut: CTRL + SHIFT + V (CMD+SHIFT+V for mac)
+-SonarLint - A tool to help detect and fix code quality issues for javascript, html, python, java and more! Linting tools provide additional informational feedback when syntax errors are detected or if code is inefficient to a degree (repeating the same code over and over, for instance)

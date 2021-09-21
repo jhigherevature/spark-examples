@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>More Selectors</title>
+    <style>
+        p {
+            font-size: 15pt;
+        }
+
+        /* 
+            .link and [class="link"] are effectively the exact same selector.
+            In the case of a "tie" when it comes to selectors, the last rule is used.
+            Otherwise, the more specific rule wins - This is called Specificity.
+        */
+        .link {
+            background-color: orange;
+        }
+
+        [class="link"] {
+            background-color: lightcoral;
+        }
+
+        a {
+            background-color: darkcyan;
+        }
+
+        a:hover {
+            border: 5px solid blue;
+            font-size: 24pt;
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        <a class="link" href="https://www.google.com">Click to go to Google</a>
+        <br />
+        
+        <!-- Inline styles are always the most 'specific' when it comes to specificity -->
+        <a style="background-color: dimgrey;" class="link-to-amazon" href="https://www.amazon.com">Click to go to Amazon</a>
+        <br />
+        
+        <a href="https://www.revature.com">Click to go to Revature</a>
+    </p>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Media Files</title>
+</head>
+<!-- 
+    This is a Code Comment. Code Comments are not visible in the web brower
+
+    In HTML Code Comments are multi-line, meaning they can extend one or more lines
+
+    Code Comments are used to communicate important information to other developers or to leave yourself reminders.
+-->
+
+<!--
+	File Pathing determines where a file is located on your computer. 
+	
+	You have two options when determining pathing. "Absolute" pathing and "Relative" pathing
+
+	Absolute pathing establishes exactly where a referenced resource is located, regardless of the origin file's location.
+	
+	Relative pathing establishes where a resouce is located based on the origin file's current location. Typically Relative pathing is used in enterprise projects.
+-->
+<body>
+    <!-- Audio Files -->
+    <h1>AUDIO</h1>
+    <!-- The following example uses absolute pathing -->
+    <audio src="C:/Users/JosephHighe/Desktop/Spark_Examples/WebTechnologies/DayThree/audio/notes.mp3" controls>
+        <p>Audio file not supported!</p>
+    </audio>
+
+    <!-- The following example uses Relative Pathing 
+		Note: the "../" in the relative path below indicate moving "out" of the current directory (folder)
+	-->
+    <audio controls>
+        <!-- Audio and Video elements can contain multiple nested source elements to display an audio or video file appropriate for the web browser -->
+        <source src="../audio/notes.mp3">
+        <source src="../audio/notes.ogg">
+    </audio>
+
+
+    <!-- Video, using relative pathing -->
+    <h1>VIDEO</h1>
+    <video width="200" height="200" src="../video/ping-pong.mp4" controls muted loop autoplay>
+        <p>Video File not support</p>
+    </video>
+
+    <!-- Similar to audio files, you can also use nested source elements for videos -->
+    <video width="450" height="300" controls muted loop>
+        <source src="../video/ping-pong.mp4" type="video/mp4">
+        <source src="../video/ping-pong.webm" type="video/webm">
+    </video>
+
+
+    <!-- Images. The src property is used to link the image resource -->
+    <h1>IMAGES</h1>
+    <img width="200" height="200" src="../images/sample-image.png" alt="Revature Logo">
+
+</body>
+
+</html>

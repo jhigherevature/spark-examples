@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The This Keyword</title>
+</head>
+
+<body>
+    <!-- This does NOT use the JavaScript Event System-->
+    <button onclick="buttonFunc()">On Click Attribute!</button>
+
+    
+    <button id="objectRef">Object Reference Event!</button>
+    <button id="evtButtonRef">Add Event Handler Event!</button>
+</body>
+
+<script>
+    /*
+        In Javascript the 'this' keyword is a way to reference a particular object or element based on the context in which it is used.
+        (Note: the 'this' keyword has a slightly different, and more straight-forward application in other programming languages.)
+
+        'this' holds meaning in 4 different contexts in Javascript:
+            1. Alone... (outside of any functions or objects)
+            2. In an independent function... (a function that does not exist within an object)
+            3. Within an object's function... (a function belonging to an object)
+            4. When used with an event...
+    */
+
+    /* 
+        1. Alone... 'this' refers to the global object (browser window)
+    */
+    let windowObject = this;
+    var globeVar = "This is a Global Variable";
+
+    /*
+        Before we continue, lets talk about another difference between 'let', 'var' and 'const'...
+
+        The 'let' and 'const' keywords create 'block scope' variables. 'block scope' means that the variable only exists in the context it was created. 
+        
+        Remember 'hoisting'? well 'hoisting' applies to this 'global context', not just the 'block'
+
+        Therefore you cannot use the 'this' keyword to reference variables created with 'let' or 'const' in the global object (browser window), but you can use the 'this' keyword with the variables created using the 'var' keyword
+    */
+    let globeLet = "This is NOT a Global Variable";
+    const globeConst = "This is NOT a Global Variable";
+    console.log(windowObject);
+    console.log("var: " + this.globeVar);
+    console.log("let: " + this.globeLet);       // These are undefined
+    console.log("const: " + this.globeConst);   // These are undefined
+
+    /*
+        2. In an Independent Function (a function outside of an object)... 'this' also refers to the global object
+    */
+    function myFunc() {
+        var globeVar = "Var inside the function";
+        console.log(this.globeVar);         // This is the Global Variable
+        console.log(globeVar);              // Local
+    }
+    myFunc();
+
+    /*
+        3. In a function within an object... 'this' refers to the owner object
+    */ 
+    var obj = {
+        globeVar: "This is the Object's globeVar",
+        talk: function () {
+            console.log(this.globeVar); // the variable in this object
+        }
+    }
+    obj.talk();
+
+    /*
+        4. In an event... 'this' refers to the element that received the event
+
+        The following function is used on all of the buttons, with all of the event binding types.
+        
+        Remember, referencing a function directly on the object does NOT use the event system.
+    */
+    var buttonFunc = function () {
+        console.log("Function Fired!");
+        this.innerHTML = "Changed";
+    }
+
+    let objectRef = document.getElementById("objectRef");
+    objectRef.onclick = buttonFunc;
+
+    /*
+        This is the way you should utilize the Javascript Event System
+    */
+    let evtButtonRef = document.getElementById("evtButtonRef");
+    evtButtonRef.addEventListener("click", buttonFunc);
+</script>
+
+</html>

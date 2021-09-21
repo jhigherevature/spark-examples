@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Positioning</title>
+    <style>
+        .ib {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            border: 2px solid black;
+            background-color: greenyellow;
+        }
+
+        p {
+            display: inline;
+        }
+
+        /* Absolutely positioned elements ignore, and are ignored by, other sibling elements. The element's position is determined by the top, left, right, or bottom properties in relation to their current parent element. These properties determine how far from the top, left, right, or bottom the element will appear, with priority going to top and left.
+        */
+        .abs {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            border: 5px dotted darkgoldenrod;
+            background-color: blueviolet;
+        }
+
+        /* Relatively positioned elements can be moved using the top, left, right or bottom properties, with priority going to the top and left properties. Unlike absolute positioning, these elements take their position and other element positions into account. */
+        .rel {
+            position: relative;
+            top: 100px;
+            left: 100px;
+            border: 5px dotted honeydew;
+            background-color: darkcyan;
+        }
+
+        /* Staticly positioned elements are positioned in relation to other elements, but do not take extra positional properties (such as top, left, right and bottom) into account */
+        .stc {
+            position: static;
+            /* The top and left properties here are ignored due to static positioning */
+            top: 500px;
+            left: 500px;
+            border: 5px dotted darkgreen;
+            background-color: mediumaquamarine;
+        }
+
+        /* Fixed positioning on an element works like absolute positioning, in that the element ignores and is ignored by other elements; however, the position is determined by the viewing window and not the surrounding elements. If you scroll the page, the fixed elements will scroll as well, in the same position */
+        .fxd {
+            position: fixed;
+            top: 250px;
+            left: 250px;
+            border: 5px dotted orangered;
+            background-color: hotpink;
+        }
+
+        /*
+            This id (parent) is used to show the relationship between positioning elements and their parent container. Add an id attribute with the value "parent" to the topmost div element below to see the effect
+        */
+        #parent {
+            display: inline-block;
+            /* vw stands for Viewport Width and is relative to the size of your browser window */
+            width: 75vw;
+
+            /* % are used to determine a property relative to its current parent or default size */
+            height: 95%;
+            border: 2px dashed orange;
+            padding: 20px;
+            background-color: orchid;
+            position: relative;
+
+            /* Absolute sizes, such as pixels, are based on your computers hardware, but will be the same across elements, regardless of their relative position or size compared to other elements */
+            top: 75px;
+            left: 75px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="parent">
+
+        <h1>Absolute Positioning!</h1>
+        <div class="ib">One</div>
+        <!-- Elements can 'belong' to multiple classes by separating each class name
+    with a space.  -->
+        <div class="ib abs">Absolute</div>
+        <div class="ib">Three</div>
+        <div class="ib">Four</div>
+        <p>This is an unstyled Paragraph!
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Egestas diam in arcu cursus. Nec feugiat nisl pretium fusce. Odio eu feugiat pretium
+            nibh
+            ipsum consequat nisl. Nisl rhoncus mattis rhoncus urna. Posuere ac ut consequat semper viverra nam. Leo in
+            vitae
+            turpis massa sed elementum tempus. Ac turpis egestas integer eget. Tristique senectus et netus et malesuada.
+            Volutpat blandit aliquam etiam erat velit scelerisque in dictum. Ante in nibh mauris cursus mattis molestie
+            a iaculis at. Et netus et malesuada fames ac. Quis hendrerit dolor magna eget est lorem ipsum dolor. Feugiat
+            sed lectus vestibulum mattis ullamcorper velit sed ullamcorper.
+        </p>
+
+        <h1>Relative Positioning!</h1>
+        <div class="ib">One</div>
+        <div class="ib rel">Relative</div>
+        <div class="ib">Three</div>
+        <div class="ib">Four</div>
+        <p>This is an unstyled Paragraph!
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Egestas diam in arcu cursus. Nec feugiat nisl pretium fusce. Odio eu feugiat pretium
+            nibh
+            ipsum consequat nisl. Nisl rhoncus mattis rhoncus urna. Posuere ac ut consequat semper viverra nam. Leo in
+            vitae
+            turpis massa sed elementum tempus. Ac turpis egestas integer eget. Tristique senectus et netus et malesuada.
+            Volutpat blandit aliquam etiam erat velit scelerisque in dictum. Ante in nibh mauris cursus mattis molestie
+            a iaculis at. Et netus et malesuada fames ac. Quis hendrerit dolor magna eget est lorem ipsum dolor. Feugiat
+            sed lectus vestibulum mattis ullamcorper velit sed ullamcorper.
+        </p>
+
+
+        <h1>Static Positioning!</h1>
+        <div class="ib">One</div>
+        <div class="ib stc">Static</div>
+        <div class="ib">Three</div>
+        <div class="ib">Four</div>
+        <p>This is an unstyled Paragraph!
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Egestas diam in arcu cursus. Nec feugiat nisl pretium fusce. Odio eu feugiat pretium
+            nibh
+            ipsum consequat nisl. Nisl rhoncus mattis rhoncus urna. Posuere ac ut consequat semper viverra nam. Leo in
+            vitae
+            turpis massa sed elementum tempus. Ac turpis egestas integer eget. Tristique senectus et netus et malesuada.
+            Volutpat blandit aliquam etiam erat velit scelerisque in dictum. Ante in nibh mauris cursus mattis molestie
+            a iaculis at. Et netus et malesuada fames ac. Quis hendrerit dolor magna eget est lorem ipsum dolor. Feugiat
+            sed lectus vestibulum mattis ullamcorper velit sed ullamcorper.
+        </p>
+
+
+        <h1>Fixed Positioning!</h1>
+        <div class="ib">One</div>
+        <div class="ib fxd">Fixed</div>
+        <div class="ib">Three</div>
+        <div class="ib">Four</div>
+        <p>This is an unstyled Paragraph!
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Egestas diam in arcu cursus. Nec feugiat nisl pretium fusce. Odio eu feugiat pretium
+            nibh
+            ipsum consequat nisl. Nisl rhoncus mattis rhoncus urna. Posuere ac ut consequat semper viverra nam. Leo in
+            vitae
+            turpis massa sed elementum tempus. Ac turpis egestas integer eget. Tristique senectus et netus et malesuada.
+            Volutpat blandit aliquam etiam erat velit scelerisque in dictum. Ante in nibh mauris cursus mattis molestie
+            a iaculis at. Et netus et malesuada fames ac. Quis hendrerit dolor magna eget est lorem ipsum dolor. Feugiat
+            sed lectus vestibulum mattis ullamcorper velit sed ullamcorper.
+        </p>
+    
+	</div>
+
+</body>
+
+</html>
