@@ -4,10 +4,10 @@ package generics;
  * The Following Class is an altered version of the NodeStack
  * class within our collections package.
  * 
- * Note that this file also includes a 'Generic Node' class, which
- * is an altered version of the Node class in the collections package.
- * This class is a closer represention of how code within the java.util
- * package is structured.
+ * Note that this file also includes a 'Generic Node' class, 
+ * which is an altered version of the Node class in the 
+ * collections package. This class is a closer representation
+ * of how code within the java.util package is structured.
  */
 public class GenericNodeStack<T> {
 	GenericNode<T> top;
