@@ -17,8 +17,6 @@ let word="TESTING";
 
     This translates to:
     "J - - - - - - - - -"
-
-    on our webpage...
 */
 let revealedLetters = new Array(word.length);
 
@@ -47,7 +45,13 @@ function drawStrikeLetters() {
 
 // Manipulates the DOM to write the successfully guessed letters of the word, replacing them with dashes if not yet guessed
 function drawWordProgress() {
+    // Variable to display our word...
     let display = "";
+    
+    /*
+        Loop through revealed letters...if an element is false, we want to record a '-'
+        If the element is true we want to record the associated letter from our word...
+    */
     for (let i = 0; i < revealedLetters.length; i++) {
         if (revealedLetters[i] == true) {
             display = display + word[i];
@@ -55,17 +59,22 @@ function drawWordProgress() {
             display = display + " _ ";
         }
     }
-    /*
-        Loop through revealed letters...if an element is false, we want to record a '-'
-        If the element is true we want to record the letter that exists in our word...
-    */
 
+    // Display the contents to the webpage
     document.getElementById("letter-display").innerHTML = display;
 }
 
 // Manipulates the DOM to update the image of the gallows for the current game state.
 function drawGallows() {
-
+    /*
+        Recall that <img> elements display content based on the path set for the 'src' attribute
+        
+        If you want to change an image src, you can use DOM Manipulation to locate the element
+        and change specific attribute values.
+        
+        For example, to change the value of an element's 'type' attribute:
+            document.getElementById("example-id").type = "New Type Value";
+    */
 }
 
 
@@ -89,8 +98,12 @@ function processGuess(eventData) {
     // this is required to prevent our form from submitting!
     eventData.preventDefault();
     let guess = document.getElementById("guessed-letter").value.toUpperCase();
+    
+    /* 
+     * Note, Javascript provides a simple, and built-in way to perform the 
+     * following, but we will explore this logic step-by-step
+     */
     let letterExistInWord = false;
-
     for (let i = 0; i < word.length; i++) {
         // == and === comparisons
         if (guess == word[i]){
@@ -99,12 +112,10 @@ function processGuess(eventData) {
         }
     }
 
+    // using the logic from above...
     if (letterExistInWord) {
-        drawWordProgress();
+        // What to do if the letter exists in the word?
     } else {
-        strikeLetters[strikes] = guess;
-        strikes++;
-        drawStrikeLetters();
-        drawGallows();
+        // What do do if the letter does not exist in the word?
     }
 }
