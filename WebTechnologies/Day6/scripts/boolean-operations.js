@@ -32,6 +32,11 @@ console.log((true && false) || false);  // false
 console.log((true || false) && false);  // false with ()
 console.log(true || false && false);    // true without ()
 
+
+/*
+    In javascript (not all languages) then AND and OR operations actually use the
+    Truthy/Falsy value of expressions to determine what value should be returned.
+*/
 /*
 For && Operations, the comparison is as follows:
     1 - Evaluate the operands from left to right
@@ -39,7 +44,7 @@ For && Operations, the comparison is as follows:
     3 - Return the first falsy value if available. 
     4 - If no falsy values exist, return the last truthy value.
 */
-// console.log(":::: TRUTHY/FALSY: && OPERATIONS ::::");
+// console.log(":::: BONUS: TRUTHY/FALSY: && OPERATIONS ::::");
 // console.log(5 && true);     // this will print true
 // console.log(true && 5);     // this will print 5
 // console.log(false && 5);    // this will print false
@@ -55,7 +60,7 @@ For || Operations, the comparison is as follows:
     3 - Return the first truthy value if available. 
     4 - If no truthy values exist, return the last falsy value.
 */
-// console.log(":::: TRUTHY/FALSY: || OPERATIONS ::::");
+// console.log(":::: BONUS: TRUTHY/FALSY: || OPERATIONS ::::");
 // console.log(5 || true);     // this will print 5
 // console.log(true || 5);     // this will print true
 // console.log(false || 5);    // this will print 5
