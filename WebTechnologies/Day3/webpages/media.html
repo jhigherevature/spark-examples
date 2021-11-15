@@ -38,7 +38,6 @@
         <source src="../audio/notes.ogg">
     </audio>
 
-
     <!-- Video, using relative pathing -->
     <h1>VIDEO</h1>
     <video width="200" height="200" src="../video/ping-pong.mp4" controls muted loop autoplay>
@@ -51,11 +50,17 @@
         <source src="../video/ping-pong.webm" type="video/webm">
     </video>
 
-
     <!-- Images. The src property is used to link the image resource -->
     <h1>IMAGES</h1>
     <img width="200" height="200" src="../images/sample-image.png" alt="Revature Logo">
 
+    <h1>EMBEDDED MEDIA</h1>
+    <!-- Some, but not all, websites also allow for the embedding of certain content from their site 
+	The iframe element may be used to create an inline frame to display content -->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY" title="YouTube video player" frameborder="0" allowfullscreen>
+    </iframe>
+
+    <iframe width="800" height="450" src="https://en.wikipedia.org/wiki/Programming_language"></iframe>
 </body>
 
 </html>
