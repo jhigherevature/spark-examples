@@ -65,12 +65,27 @@ For || Operations, the comparison is as follows:
 // console.log(false || 0);    // this will print 0
 
 
-// console.log(":::: BONUS: XNOR (exclusive Not Or) ::::");
-// console.log(":::: BONUS: NOR (Not Or)::::");
+/*
+    The Not OR a.k.a. NOR operation:
+*/
+// console.log(":::: BONUS: NOR ::::");
+// console.log(!(true | true));
+// console.log(!(true | false));
+// console.log(!(false | true));
+// console.log(!(false | false));
+
+/*
+    The eXclusive OR a.k.a. XOR Operator uses an upwards carrot '^'
+*/
+// console.log(":::: BONUS: XOR ::::");
 // console.log(true ^ true);
 // console.log(true ^ false);
 // console.log(false ^ true);
 // console.log(false ^ false);
+
+/*
+    The eXclusive Not OR a.k.a. XNOR:
+*/
 // console.log(":::: BONUS: XNOR ::::");
 // console.log(!(true ^ true));
 // console.log(!(true ^ false));
