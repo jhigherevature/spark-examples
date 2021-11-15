@@ -30,6 +30,8 @@
     Keep in mind that Id's should be unique to a single element...If multiple elements have the same ID, then the function will only reference the first element found with that particular ID.
 
     ***One thing to keep in mind If we use DOM Manipulation, we should put our Script reference below our Body element. This is because our webpage loaded from top to bottom, and we want to ensure that all elements have loaded before we try to reference them. As such, the script element should come near the bottom of the html file.***
+
+    Alternatively, you can use the attribute 'defer' in the script element, so long as the script file is referenced externally using the src attribute.
 -->
 <script src="dom_manip_part1.js">
 
