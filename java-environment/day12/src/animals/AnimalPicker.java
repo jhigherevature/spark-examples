@@ -3,37 +3,67 @@ package animals;
 import java.util.Scanner;
 
 public class AnimalPicker {
+	public static Scanner scan = new Scanner(System.in);
+	
 	public static void main(String[] args) {
-		Owner own = new Owner();
-		own.name = "Joseph";
+		Owner owner = new Owner();
+		owner.name = "Joseph";
+
+		boolean running = true;
+		String menuSelection = null;
+
 		
-		Scanner scan = new Scanner(System.in);
-		int menuSelection = 0;
-		
-		while (menuSelection != 3) {
-			System.out.println("Choose an Animal:"
-					+ "\n[1] - Dog"
-					+ "\n[2] - Shark"
-					+ "\n[3] - Quit");
-			
-			menuSelection = scan.nextInt();
-			
-			switch(menuSelection) {
-			case 1:
-				own.pet = new Dog("Doug", 7);
+		while (running) {
+			printAnimalMenu();
+			menuSelection = scan.next().toLowerCase();
+			/*
+			 * Remember that fall-through logic means
+			 * that we will perform code in ALL of the blocks
+			 * beneath a matching case, until the keyword
+			 * 'break' or the end of our switch statement
+			 * has been reached...
+			 */
+			switch (menuSelection) {
+			case "c":
+			case "cat":
+				owner.setPet(new Cat("Ceaser", 2, "Calico"));
 				break;
-			case 2:
-				own.pet = new Shark("Sam", 18);
+			case "d":
+			case "dog":
+				owner.setPet(new Dog("Doug", 3, "Golden Retriever"));
 				break;
-			case 3:
-				System.out.println("Good Bye");
+			case "f":
+			case "fish":
+				owner.setPet(new Fish("Franklin", 1, "Goldfish", true));
 				break;
+			case "r":
+			case "rabbit":
+				owner.setPet(new Rabbit("Roger", 2));
+				break;
+			case "q":
+			case "quit":
+				System.out.println("Goodbye!");
+				running = false;
+				break;
+			default:
+				owner.pet = null;
+				System.out.println("Sorry, I didn't understand that, please try again");
 			}
-			
-			System.out.println("Current Pet: " + own.pet.name);
+
+			if (owner.pet != null && running) {
+				System.out.println("You chose a: " + owner.pet.type);
+				System.out.println("This pet costs: $" + owner.pet.price);
+			}
 		}
-		
-		System.out.println("Owner: " + own.name);
-		System.out.println("Pet: " + own.pet.name);
+	}
+
+	public static void printAnimalMenu() {
+		System.out.println("Choose your pet!:"
+				+ "\n[C | 'Cat'] - Cat"
+				+ "\n[D | 'Dog'] - Dog"
+				+ "\n[F | 'Fish'] - Fish"
+				+ "\n[R | 'Rabbit'] - Rabbit"
+				+ "\n[Q | 'Quit'] - Quit"
+				);
 	}
 }

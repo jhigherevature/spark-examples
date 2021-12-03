@@ -1,28 +1,26 @@
 package exceptions;
 
 public class Simulator {
+	/*
+	 * When a declared method has a 'throws' declaration,
+	 * it is used to consolidate how many try/catch blocks
+	 * are needed throughout your code. In this case, any
+	 * method which has the 'throws' declaration must 
+	 * eventually be handled within a try/catch block, as 
+	 * shown below:
+	 */
 	public static void main(String[] args) {
+		CustomMathOperations math = new CustomMathOperations();
 		try {
-			sumOddNumbers(1,2);
+			math.sumOddNumbers(2, 1);
+			math.sumDifferentNumbers(2, 4);
 		} catch (EvenNumberException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			System.exit(0);
-		} catch (Exception e) {
+//			System.out.println("Ask the user for different input!");
+		} catch (DuplicateInputException e) {
 			e.printStackTrace();
-		} finally {			
-			System.out.println("This will run, even if we do or don't catch an exception!");
 		}
-	}
-	
-	public static int sumOddNumbers(int a, int b) 
-			throws EvenNumberException {
-		if (a % 2 == 0)
-			throw new EvenNumberException("First input was even");
-		
-		if (b % 2 == 0)
-			throw new EvenNumberException("Second input was even");
-
-		return a + b;
+//		math.sumDifferentOddNumbers(3, 3);
 	}
 }

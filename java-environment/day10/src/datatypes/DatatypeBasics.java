@@ -2,18 +2,26 @@ package datatypes;
 
 public class DatatypeBasics {
 	public static void main(String[] args) {
-		int i = 36;
-		double d = 3.14;
-		System.out.println(i); // 36
-		System.out.println(d); // 3.14
+		byte b = 127;
+		short s = 10000;
+		int i = 100000; // default datatype for whole number literals
+		long l = 10000000000000000L; // use an 'L' to indicate a long
 		
-		char c = 'A';
-		System.out.println(c);
+		float f = 3.14f; // use an 'F' to indicate a float
+		double d = 3.14; // default datatype for decimal number literals
 		
-		boolean b = true;
-		System.out.println(b);
+		boolean bool = true; // true or false
 		
-		byte by = 127;
-		System.out.println(by);
+		/*
+		 * Unlike Javascript which can support
+		 * "
+		 * '
+		 * `
+		 * for creating strings.
+		 * 
+		 * Java uses dobule quotes (") for strings
+		 * and single quotes (') for chars
+		 */
+		char c = 'C';
 	}
 }

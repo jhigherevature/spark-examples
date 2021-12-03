@@ -1,31 +1,15 @@
 package animals;
 
 public class Dog extends Animal {
-	public String breed;
+
+	String breed;
 	
-	/*
-	 * Constructor for Dog class
-	 * 	Constructors will share the exact name of a class
-	 * 	You must use the 'new' keyword when calling a constructor
-	 */	
-	public Dog(String name, int age) {
+	public Dog(String name, int age, String breed) {
 		super(name, age, "Dog");
+		this.breed = breed;
 	}
 	
-	/*
-	 * Standard methods declare a return type. 
-	 * Constructors will NOT have a return type
-	 * 
-	 */
 	public void bark() {
 		System.out.println("Woof Woof");
-	}
-	
-	public void wagTail() {
-		
-	}
-	
-	public boolean isHungry() {
-		return true;
 	}
 }
