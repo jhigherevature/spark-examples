@@ -4,8 +4,15 @@
 <head>
     <title>More Selectors</title>
     <style>
+        /* Since CSS rules "cascade" this will also apply to any nested elements as well, unless that element has a more specific rule that runs contray to this css property
+        */
         p {
             font-size: 15pt;
+        }
+        /* Note that you can combine different selectors as well. The following properties will only apply to paragraphs that have a class set to "example".
+        */
+        p.example {
+            font-family: 'Courier New', Courier, monospace;
         }
 
         /* 
@@ -16,7 +23,8 @@
         .link {
             background-color: orange;
         }
-
+        /* Same specificity as the above rule! When two rules have an identical specificity, the last rule defined is applied
+        */
         [class="link"] {
             background-color: lightcoral;
         }
@@ -24,7 +32,8 @@
         a {
             background-color: darkcyan;
         }
-
+        /* Interactive 'Hover' selector
+        */
         a:hover {
             border: 5px solid blue;
             font-size: 24pt;
@@ -34,11 +43,20 @@
 </head>
 
 <body>
+
+    <p class="example">
+        This paragraph has the class set to "example"
+    </p>
+
+    <p class="no-styles">
+        This paragraph has a class set to "no-styles". This is a misnomer because the 'p' selector still applies to it!
+    </p>
+
     <p>
         <a class="link" href="https://www.google.com">Click to go to Google</a>
         <br />
         
-        <!-- Inline styles are always the most 'specific' when it comes to specificity -->
+        <!-- Inline styles are always the most 'specific' when it comes to CSS specificity -->
         <a style="background-color: dimgrey;" class="link-to-amazon" href="https://www.amazon.com">Click to go to Amazon</a>
         <br />
         
