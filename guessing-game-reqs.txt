@@ -1,0 +1,15 @@
+guessing game
+
+1. create Project2 folder, guessingGame.html
+2. create script tag
+3. Have this functionality (you can choose your own min and max values):
+```
+let min = 3;
+let max = 10;
+let target = Math.random() * (max - min + 1); 
+target = Math.floor(target) + min;
+```
+4. create a variable to hold user's guess
+5. use prompt and alert
+6. refreshing page gives new target
+7. loops until number is guessed

@@ -1,0 +1,9 @@
+java unit converter
+
+1. UnitConverter > main package > Converter class with main method
+2. create menuSelection int
+3. use while loop with expression specified
+4. use Scanner to get user input
+5. create a menu to display to user
+6. use switch statement, make cases convert and print output
+7. give user option to quit

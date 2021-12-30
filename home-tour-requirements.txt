@@ -1,0 +1,33 @@
+home tour
+
+1. HomeTour project with following packages and classes:
+fixtures package
+	abstract Fixtures class
+	- String name
+	- String shortDescription
+	- String longDescription
+	Room class
+	- Room[] exits
+	- has a constructor that accepts Fixture properties as params.
+	- has a getter for all exits
+game package
+	Main class
+	- main, printRoom, collectInput, parse methods
+	Player class
+	- Room currentRoom
+	RoomManager class
+	- Room startingRoom
+	- Room[] rooms
+	- init method
+
+2. improve home tour (optional)
+	- add items that player can look at
+	- add doors that player can open and close
+	- add more rooms
+	- refactor RoomManager's Room[] to be a collection
+	- refactor Room's Room[] to be a Map
+3. debug and test:
+	- make sure it can't crash
+	- make sure exits are two directional
+	- have at least three rooms
+	- make sure added features are complete and functional

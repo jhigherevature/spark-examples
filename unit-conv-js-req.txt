@@ -1,0 +1,16 @@
+unit converter js
+
+First part:
+1.  Make sure you have an index.html page with a menu.
+2.  Make sure menu has links to your four conversion pages and
+    is floated to left and no wider than 20% of window.
+3.  Make sure section with formula and history is to the right 
+    of menu in your conversion pages.
+4.  Four conversion pages (like miles to kilometers, dollars
+    to yen, etc)
+5.  Make sure each conversion page links to the home page
+
+Second part:
+6.  Make sure you have a script tag in each
+    each html document that has conversions.
+7.  Make sure you convert user input from prompts to user output (alerts)
