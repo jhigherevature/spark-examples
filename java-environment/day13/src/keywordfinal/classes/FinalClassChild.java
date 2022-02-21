@@ -1,4 +1,4 @@
-package keywordfinal;
+package keywordfinal.classes;
 
 /*
  * This is not actually the child of 'FinalClass'

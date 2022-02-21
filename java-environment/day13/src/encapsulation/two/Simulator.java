@@ -10,8 +10,8 @@ public class Simulator {
 //		System.out.println(p.defString); // error
 //		System.out.println(p.priString); // error
 		
-		Child c = new Child();
-		System.out.println(c.pubString);
-//		System.out.println(c.proString);
+//		Child c = new Child();
+//		System.out.println(c.pubString);
+//		System.out.println(c.proString); // error
 	}
 }

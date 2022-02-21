@@ -1,4 +1,4 @@
-package inheritance;
+package inheritance.constructors;
 
 /*
  * Java will provide every class you define with a
@@ -18,6 +18,7 @@ public class Child extends Parent {
 		 * not exist, then you will need to account for this
 		 * as the developer!
 		 */
+		//super(); // implicit call
 		System.out.println("No-args Constructor [Child Class]");
 	}
 	

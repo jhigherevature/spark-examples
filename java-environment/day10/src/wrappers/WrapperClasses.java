@@ -36,7 +36,6 @@ public class WrapperClasses {
 		 * specifically:
 		 */
 		number = null; // We can assign null to reference variables
-		// num = null; // error - primitives cannot be null
-		
+//		num = null; // error - primitives cannot be null
 	}
 }

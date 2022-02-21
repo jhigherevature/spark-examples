@@ -8,6 +8,7 @@ import java.util.Scanner;
 
 public class ScannerSimulator {
 	
+	public static Scanner app_Scanner = new Scanner(System.in);
 	/*
 	 * The Scanner class allows you to read data from
 	 * a location specified (in our case, System.in) 
@@ -19,13 +20,9 @@ public class ScannerSimulator {
 		System.out.println("::: START OF APPLICATION :::");
 		
 		Scanner scan = new Scanner(System.in);
-		System.out.println("Give me a String:");
-		String input = scan.next();
-		System.out.println("Your input was: " + input);
-
-		System.out.println("Give me a number now:");
-		int number = scan.nextInt();
-		System.out.println("Your number was: " + number);
+		System.out.println("Give me an int:");
+		int in = scan.nextInt();
+		System.out.println("You gave me: " + in);		
 		
 		System.out.println("::: END OF APPLICATION :::");
 		
@@ -37,6 +34,8 @@ public class ScannerSimulator {
 		 * do not close your scanner until you are completely 
 		 * done with it!
 		 */
-		scan.close();
+		scan.close();		
+//		Scanner scan_2 = new Scanner(System.in);
+//		double dbl = scan_2.nextDouble();
 	}
 }

@@ -16,8 +16,6 @@ public class Simulator {
 		scooby.breed = "Great Dane";
 		scooby.bark();
 		System.out.println(scooby.name);
-		scooby.name = "Lisa";
-		System.out.println(scooby.name);
 		
 		/*
 		 * The double equals in java '==' is the equality
@@ -29,17 +27,12 @@ public class Simulator {
 		 * the Memory Address of the variables!
 		 */
 		System.out.println("Comparisons:");
-		Dog two = new Dog();
-		two.name = "Lisa";
-		two.age = 7;
-		two.weight = 100.0;
-		two.breed = "Great Dane";
-		System.out.println(scooby == two);
-		
-		System.out.println(two.name == scooby.name);
-		
-		System.out.println(two.name.toUpperCase());
-		System.out.println(two.name);
-		System.out.println(two.name.length());
+		Dog clone = new Dog();
+		clone.name = "Scooby Doo";
+		clone.age = 7;
+		clone.weight = 100.0;
+		clone.breed = "Great Dane";
+		System.out.println("scooby == clone:"+  (scooby == clone));
+		System.out.println("scooby.name == clone.name:" + (scooby.name == clone.name));
 	}
 }

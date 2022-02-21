@@ -1,4 +1,4 @@
-package inheritance;
+package inheritance.constructors;
 
 public class GrandParent {
 	public String familyName;

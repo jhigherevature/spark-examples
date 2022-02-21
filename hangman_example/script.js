@@ -1,3 +1,11 @@
+/*
+	TIPS: Remember to create HTML elements with unique ID values to easily find an element you want to manipulate.
+	
+	check your code often!!! get in the habit of testing your logic after writing only 2-5 lines of code. The more code
+	you write before checking your work, the more potential places that might cause an error
+	
+	console.log is your best friend!
+*/
 // representation for player 1's word! -- What player 2 is trying to guess!
 let word="TESTING";
 
@@ -28,10 +36,13 @@ let strikes = 0; // the number of incorrect guesses made so far
 /*
     representation for all letters incorrectly guessed.
 
+	if the word is:
     word = "CAT"
 
+	and you guess:
     guess = "p".
 
+	The strikeLetters array should look like this:
     strikeLetters = ["p", , , , ]
 */
 let strikeLetters = new Array(maxStrikes); // this will contain every letter that has been incorrectly guessed.
@@ -39,6 +50,13 @@ let strikeLetters = new Array(maxStrikes); // this will contain every letter tha
 drawWordProgress(); // run this now, to draw the empty word at the start of the game.
 
 // Manipulates the DOM to write all the strike letters to the appropriate section in hangman.html
+/*
+	Note that the drawStrikeLetters function will perform actions somewhat similar to drawWordProgress...The difference
+	is that drawStrikeLetters doesn't need to check true/false values of an array, since all of the letters added to the
+	strikeLetters array should be displayed.
+	
+	As a hint, there is a simple solution here that uses a function on javascript arrays discussed in one of the previous labs
+*/
 function drawStrikeLetters() {
 
 }
@@ -46,6 +64,7 @@ function drawStrikeLetters() {
 // Manipulates the DOM to write the successfully guessed letters of the word, replacing them with dashes if not yet guessed
 function drawWordProgress() {
     // Variable to display our word...
+	// we create an empty string and "build it" in the for-loop below
     let display = "";
     
     /*
@@ -115,7 +134,14 @@ function processGuess(eventData) {
     // using the logic from above...
     if (letterExistInWord) {
         // What to do if the letter exists in the word?
+		// This is where you should invoke the drawWordProgress function
     } else {
         // What do do if the letter does not exist in the word?
+		// There are a few steps here (note the following may not be in the exact order you want to perform them:
+		// invoke drawStrikeLetters function
+		// invoke drawGallows function
+		// increase strikes
+		// add the guessed letter (guess variable) to the 'strikeLetters' array
+		// hint regarding adding letters to 'strikeLetters' array: note that the number of strikes starts at 0 and you increase it each time you make a mistake...
     }
 }

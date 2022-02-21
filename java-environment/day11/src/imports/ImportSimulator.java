@@ -12,7 +12,8 @@ package imports;
  * of certain classes to use, or to leverage functionality
  * from other parts of your project.
  */
-import keywordthis.Account;
+ import keywordthis.Account;
+ import one.two.three.four.five.Example;
 
 public class ImportSimulator {
 	public static void main(String[] args) {
@@ -20,6 +21,7 @@ public class ImportSimulator {
 		
 		Account thisaccount = new Account("Joseph", 2021, 100.0);
 		
+		Example ex = new Example();
 		/*
 		 * You can also use the "Fully Qualified Class Name"
 		 * FQCN to reference a class without the import

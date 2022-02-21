@@ -1,8 +1,14 @@
 package animals;
 
+/*
+ * Using the 'extends' keyword establishes an IS-A
+ * relationship.
+ * 
+ * "A Dog IS-A(n) Animal"
+ */
 public class Dog extends Animal {
 
-	String breed;
+	public String breed;
 	
 	public Dog(String name, int age, String breed) {
 		super(name, age, "Dog");

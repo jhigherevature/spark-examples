@@ -1,8 +1,7 @@
-package inheritance;
+package inheritance.constructors;
 
 public class Parent extends GrandParent {
 	public String first_name;
-	public String last_name;
 	
 	// No-argument (no-args) constructor for the Parent class
 	public Parent() {
@@ -11,6 +10,8 @@ public class Parent extends GrandParent {
 	
 	// Parameterized constructor for the Parent class
 	public Parent(String first_name, String last_name) {
+//		super(last_name);
 		System.out.println("Parameterized Constructor [Parent Class]");
+		this.first_name = first_name;
 	}
 }

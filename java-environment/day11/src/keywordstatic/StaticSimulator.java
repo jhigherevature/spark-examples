@@ -1,13 +1,8 @@
 package keywordstatic;
 
 public class StaticSimulator {
-	public static void sayHello() {
-		System.out.println("Hello World");
-	}
-	
 	public static void main(String[] args) {
-//		Account.printAccountInfo();
-		sayHello();
+//		Account.printAccountInfo(); // error - instance methods require objects
 		Account.staticAccountMethod();
 		
 		Account acc_1 = new Account();
@@ -34,6 +29,4 @@ public class StaticSimulator {
 		acc_1.printAccountInfo();
 		acc_2.printAccountInfo();
 	}
-	
-	
 }

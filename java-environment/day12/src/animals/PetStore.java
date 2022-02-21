@@ -2,16 +2,15 @@ package animals;
 
 import java.util.Scanner;
 
-public class AnimalPicker {
+public class PetStore {
 	public static Scanner scan = new Scanner(System.in);
 	
 	public static void main(String[] args) {
-		Owner owner = new Owner();
+		PetOwner owner = new PetOwner();
 		owner.name = "Joseph";
 
 		boolean running = true;
 		String menuSelection = null;
-
 		
 		while (running) {
 			printAnimalMenu();
@@ -52,7 +51,6 @@ public class AnimalPicker {
 
 			if (owner.pet != null && running) {
 				System.out.println("You chose a: " + owner.pet.type);
-				System.out.println("This pet costs: $" + owner.pet.price);
 			}
 		}
 	}

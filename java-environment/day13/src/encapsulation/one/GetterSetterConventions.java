@@ -67,3 +67,4 @@ public class GetterSetterConventions {
 		this.email = email;
 	}
 }
+

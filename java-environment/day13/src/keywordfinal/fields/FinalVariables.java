@@ -1,4 +1,4 @@
-package keywordfinal;
+package keywordfinal.fields;
 
 /*
  * Variables declared with the keyword 'final' cannot
@@ -7,8 +7,10 @@ package keywordfinal;
  * for the class (not both).
  */
 public class FinalVariables {
+	// The variable 'name' is initialized in the constructor below
 	public final String name;
-	// The variable number is initialized when declared
+	
+	// The variable 'number' is initialized when declared
 	public final int number = 999;
 	
 	/*

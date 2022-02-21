@@ -37,7 +37,7 @@ public class Account {
 		count++;
 	}
 	
-	public void deposit(int amount) {
+	public void deposit(double amount) {
 		/*
 		 * Here, the keyword 'this' is not required
 		 * since there are no other variables that

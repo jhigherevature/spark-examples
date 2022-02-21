@@ -11,8 +11,8 @@ public class Data {
 		Data d_2 = new Data("Joseph", 1, 100.0);
 		System.out.println(d_2);
 		
-//		System.out.println("D_1 == D_2: " + (d_1 == d_2));
-//		System.out.println("D_1.equals(D_2): " + d_1.equals(d_2));
+		System.out.println("D_1 == D_2: " + (d_1 == d_2));
+		System.out.println("D_1.equals(D_2): " + d_1.equals(d_2));
 	}
 	
 	public String name;
@@ -34,6 +34,11 @@ public class Data {
 	 * that the following method is changing behavior that
 	 * is inherited from a parent class (the Object class
 	 * in this case)
+	 * 
+	 * Note: an annotation is a metadata tag that may be
+	 * placed prior to the declaration of a class, method
+	 * or variable to provide context or typically have a 
+	 * programmatic implication.
 	 */
 	@Override
 	public int hashCode() {

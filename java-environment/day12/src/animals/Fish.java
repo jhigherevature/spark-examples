@@ -1,7 +1,13 @@
 package animals;
 
+/*
+ * Using the 'extends' keyword establishes an IS-A
+ * relationship.
+ * 
+ * "A Fish IS-A(n) Animal"
+ */
 public class Fish extends Animal {
-	String species;
+	public String species;
 	boolean freshWater;
 	public Fish(String name, int age, String species, boolean freshWater) {
 		super(name, age, "Fish");

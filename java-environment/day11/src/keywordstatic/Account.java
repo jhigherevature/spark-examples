@@ -13,6 +13,7 @@ public class Account {
 	
 	public static void staticAccountMethod() {
 		System.out.println("This method is Static within the account class!");
+//		System.out.println("My accountHolder is: " + accountHolder);
 	}
 	
 	// instance variables

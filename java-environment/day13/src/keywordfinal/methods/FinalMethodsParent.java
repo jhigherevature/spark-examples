@@ -1,4 +1,4 @@
-package keywordfinal;
+package keywordfinal.methods;
 
 public class FinalMethodsParent {
 	public final void nonChangeable() {
