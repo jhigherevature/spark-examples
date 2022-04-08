@@ -1,0 +1,23 @@
+/* div elements with an id of menu */
+p, div {
+    font-size: 16pt;
+    margin: 10px;
+}
+
+/* creates a vertical line using border on the menu */
+.vertical_right {
+    border-right: 2px solid black;
+    margin-right: 45px;
+}
+
+/* float menu to the left */
+div#menu {
+    float: left;
+    width: 20%;
+    height: 200px;
+}
+
+/* adds some space to the links in the menu */
+div a {
+    margin: 25px;
+}

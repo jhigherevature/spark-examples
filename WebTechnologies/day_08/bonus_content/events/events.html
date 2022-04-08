@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Events</title>
+</head>
+
+<body>
+    <h2>To Access Developer Tools, Press F12, or right-click and select "inspect"/"inspect element" navigate to the
+        Console tab.</h2>
+
+    <!-- This button is used to show how to link a function to an element directly -->
+    <button onclick="onClickAttribute()">On Click Attribute!</button>
+
+    <!-- This button is used to reference as an object and adding a property in our script -->
+    <button id="objectRef">Object Reference Event!</button>
+
+    <!-- This button utilizes the addEventListener function in Javascript
+        This is the standard way of using events and linking scripts to HTML elements in Javascript -->
+    <button id="evtButtonRef">Add Event Handler Event!</button>
+</body>
+
+<script>
+    /*
+        Note, this script is included directly onto this html page just to show the relationship between the buttons and functions more easily. This can be done with external files as well.
+    */
+
+    /* 
+        This is the function linked directly on the button above
+        Note: this method does NOT use the Javascript Event system
+    */
+    function onClickAttribute() {
+        console.log("This used the OnClick Attribute Event!");
+    }
+
+    /* 
+        The code below this function references a button on our HTML page and applies this function to the onclick attribute.
+
+        Note that this only allows you to apply a single function to a particular element.
+    */
+    function onClickFunction() {
+        console.log("This used the onClick as an Object Reference!");
+    }
+    let ref = document.getElementById("objectRef");
+    ref.onclick = onClickFunction;
+
+
+    /* 
+        The code below this function references a button on our HTML page and adds this function as an event when the button is clicked.
+    */
+    function objEventHandlerButton() {
+        console.log("This used the add event handler function!");
+    }
+    let evt = document.getElementById("evtButtonRef");
+    evt.addEventListener("click", objEventHandlerButton);
+
+    /* 
+        When we use the addEventListener function, we can have more than one function linked to a particular HTML element. Giving us more flexibility.
+
+        Uncomment the lines below to see this in action
+    */
+    // evt.addEventListener("click", onClickFunction);
+    // evt.addEventListener("click", onClickAttribute);
+</script>
+
+</html>

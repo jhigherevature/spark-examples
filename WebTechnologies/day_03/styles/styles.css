@@ -1,0 +1,30 @@
+p {
+    background-color: blue;
+    color: purple;
+    font-size: larger;
+}
+
+ div {
+     background-color: burlywood;
+     color: darkblue;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+ }
+
+ p, div, a {
+     font-weight: bold;
+ }
+
+ #joseph-special-div{
+     background-color: cornflowerblue;
+     color: brown;
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     font-size: 26pt;
+ }
+
+ .green_text {
+     color: green;
+ }
+
+ ul li.red_list_item {
+     color: red;
+ }

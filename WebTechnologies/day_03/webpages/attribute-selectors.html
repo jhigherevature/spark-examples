@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Attribute Selectors</title>
+    <!-- Note: I am including these rules within an internal stylesheet to make it easier to associate the CSS with the associated HTML code -->
+    
+    <style>
+        /* All elements with an 'href' attribute */
+        [href] {
+            font-size: 14pt;
+            color: crimson;
+            background-color: lavender;
+        }
+
+        /* All elements with an 'href' attribute whose value contains "google" */
+        [href*="google"] {
+            color: purple;
+            background-color: aquamarine;
+        }
+
+        [class="green-text"] {
+            font-weight: bold;
+            color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <a href="https://www.revature.com">Click to go to Revature</a>
+    <br />
+    <a href="https://www.google.com">Click to go to Google</a>
+    <br />
+    <a class="green-text" href="https://www.amazon.com">Click to go to Amazon - This has the class 'green-text'</a>
+    <br />
+
+    <p class="no-style">
+        Paragraph with class 'no-style'
+    </p>
+    <p class="green-text">
+        Paragraph with class 'green-text'
+    </p>
+    <p>
+        Paragraph with no class
+    </p>
+
+    <div class="no-style">
+        Div with class 'no-style'
+    </div>
+    <div class="green-text">
+        Div with class 'green-text'
+    </div>
+    <div>
+        Div with no class
+    </div>
+</body>
+</html>

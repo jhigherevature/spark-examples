@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specificity</title>
+    <style>
+        div {
+            border: 2px solid black;
+            padding: 5px 15px;
+            margin: 5px;
+        }
+
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: aqua;
+            font-size: 18pt;
+        }
+
+        p {
+            background-color: yellow;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 13pt;
+        }
+        div p {
+            background-color: blueviolet;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        p.red_back {
+            background-color: crimson;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 20pt;
+        }
+        p#green_back {
+            background-color: green;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+        }
+
+        table {
+            border: 1px solid black;
+            font-size: 10pt;
+            color: chocolate;
+        }
+
+        th {
+            font-family: sans-serif;
+            font-size: 15pt;
+        }
+
+        td {
+            font-size: 12pt;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Paragraph ouside div with no class or id</h1>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas diam in arcu cursus. Nec feugiat nisl pretium fusce. Odio eu feugiat pretium nibh ipsum consequat nisl. Nisl rhoncus mattis rhoncus urna. Posuere ac ut consequat semper viverra nam. Leo in vitae turpis massa sed elementum tempus. Ac turpis egestas integer eget. Tristique senectus et netus et malesuada. Volutpat blandit aliquam etiam erat velit scelerisque in dictum. Ante in nibh mauris cursus mattis molestie a iaculis at. Et netus et malesuada fames ac. Quis hendrerit dolor magna eget est lorem ipsum dolor. Feugiat sed lectus vestibulum mattis ullamcorper velit sed ullamcorper.
+    </p>
+    <h1>Paragraph inside div with no class or id</h1>
+    <div>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas diam in arcu cursus. Nec feugiat nisl pretium fusce. Odio eu feugiat pretium nibh ipsum consequat nisl. Nisl rhoncus mattis rhoncus urna. Posuere ac ut consequat semper viverra nam. Leo in vitae turpis massa sed elementum tempus. Ac turpis egestas integer eget. Tristique senectus et netus et malesuada. Volutpat blandit aliquam etiam erat velit scelerisque in dictum. Ante in nibh mauris cursus mattis molestie a iaculis at. Et netus et malesuada fames ac. Quis hendrerit dolor magna eget est lorem ipsum dolor. Feugiat sed lectus vestibulum mattis ullamcorper velit sed ullamcorper.
+        </p>
+    </div>
+    <h1>Paragraph inside div with class "red_back"</h1>
+    <div>
+        <p class="red_back">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas diam in arcu cursus. Nec feugiat nisl pretium fusce. Odio eu feugiat pretium nibh ipsum consequat nisl. Nisl rhoncus mattis rhoncus urna. Posuere ac ut consequat semper viverra nam. Leo in vitae turpis massa sed elementum tempus. Ac turpis egestas integer eget. Tristique senectus et netus et malesuada. Volutpat blandit aliquam etiam erat velit scelerisque in dictum. Ante in nibh mauris cursus mattis molestie a iaculis at. Et netus et malesuada fames ac. Quis hendrerit dolor magna eget est lorem ipsum dolor. Feugiat sed lectus vestibulum mattis ullamcorper velit sed ullamcorper.
+        </p>
+    </div>
+    <h1>Paragraph inside div with id "green_back"</h1>
+    <div>
+        <p id="green_back">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas diam in arcu cursus. Nec feugiat nisl pretium fusce. Odio eu feugiat pretium nibh ipsum consequat nisl. Nisl rhoncus mattis rhoncus urna. Posuere ac ut consequat semper viverra nam. Leo in vitae turpis massa sed elementum tempus. Ac turpis egestas integer eget. Tristique senectus et netus et malesuada. Volutpat blandit aliquam etiam erat velit scelerisque in dictum. Ante in nibh mauris cursus mattis molestie a iaculis at. Et netus et malesuada fames ac. Quis hendrerit dolor magna eget est lorem ipsum dolor. Feugiat sed lectus vestibulum mattis ullamcorper velit sed ullamcorper.
+        </p>
+    </div>
+
+    <table>
+        <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+            <th>Column 3</th>
+        </tr>
+        <tr>
+            <td>
+                Data 1
+            </td>
+            <td>
+                Data 2
+            </td>
+            <td>
+                Data 3
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Data 1
+            </td>
+            <td>
+                Data 2
+            </td>
+            <td>
+                Data 3
+            </td>
+        </tr>
+        
+    </table>
+</body>
+</html>

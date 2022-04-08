@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Interactive Selectors</title>
+    <!-- Note: I am including these rules within an internal stylesheet to make it easier to associate the CSS with the associated HTML code -->
+
+    <style>
+        a, form {
+            font-size: 12pt;
+        }
+
+        a {
+            background-color: lightskyblue;
+        }
+        /* 
+            Interactive 'Hover' selector
+        */
+        a:hover {
+            border: 5px solid blue;
+            font-size: 24pt;
+            background-color: lightgreen;
+        }
+
+        /* This effects the labels that proceed a checked input */
+        input:checked + label {
+            color:purple;
+            background-color: rosybrown;
+            border: 2px solid goldenrod;
+        }
+    </style>
+</head>
+<body>
+    <h2>Hover Links</h2>
+    <a href="https://www.google.com">Click to go to Google</a>
+    <br />
+    <a href="https://www.amazon.com">Click to go to Amazon</a>
+    <br />
+    <a href="https://www.revature.com">Click to go to Revature</a>
+    <br />
+
+    <h2>Checked Input</h2>
+    <form>
+        Select your favorite:
+        <br />
+
+        <input type="checkbox" id="option1">
+        <label for="option1">I like to read</label>
+        <br />
+        <input type="checkbox" id="option1">
+        <label for="option2"> I like to play sports</label>
+        <br />
+        <input type="checkbox" id="option3">
+        <label for="option3"> I like to watch movies</label>
+        <br />
+        <input type="checkbox" id="option4">
+        <label for="option4"> I like to listen to music</label>
+        <br />
+        <input type="checkbox" id="option5">
+        <label for="option5"> I like to play video games</label>
+    </form>
+</body>
+</html>

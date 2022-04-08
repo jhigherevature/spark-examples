@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float in HTML</title>
+    <style>
+        /* 
+        The Float property does the following:
+            1 - Displays the element as a "block" element*
+                1.1 - Though it is a block element, it acts more similarly to what you might think of when you imagine the "inline-block" property.
+                1.2 - It will ignore the left, right, top, and bottom properties when attempting to position the element away from the edges of a parent container. (control spacing between elements using margins)
+            2 - Forces the content of other elements to flow/wrap around the floating element
+                2.1 - In essence, the floating element exists in its own "layer" that interacts somewhat differently from other elements on the page, that are not floating.
+                2.2 - Multiple floating elements interact with eachother in a way that is more similar to what you would normally expect.
+            3 - Positions the element relative to the parent, on the left or right side of the parent container, depending on the value of the float property (left vs right)
+         */
+        div.float {
+            float: left;
+
+            width: 30%;
+            height: 150px;
+            border: 1px solid black;
+            background-color: coral;
+            margin: 10px;
+        }
+
+        div {
+            background-color: aquamarine;
+        }
+
+        /* To ignore the float property of surrounding HTML elements, we use the clear property...We can clear: left/right/both to ignore floating elements on the left/right or both */
+        p.clear-left {
+            clear: left;
+        }
+
+        p.clear-right {
+            clear: right;
+        }
+
+        p.clear-both {
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="float">This Div is floating!</div>
+    <p class="clear-left">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+
+    <div>
+        This is another div
+    </div>
+</body>
+</html>

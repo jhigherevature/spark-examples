@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--
+        HTML Form elements can be used to create simple (or complex) HTTP requests.
+
+        Important attributes for HTML forms include:
+            action : specify the URL where a request will be sent
+            method : specify the type of HTTP request to be sent
+                GET request : ask to retrieve data
+                POST request : submit data or verify sensitive information
+
+        When sending a request, the 'name' attribute of an HTML input field can be used to specify a parameter. Notice that the form below indicates that the text input field is named "q". This is because Google's search functionality recogonizes the parameter "q" as meaning the search term.
+    -->
+    <form method="GET" action="https://www.google.com/search">
+        <input type="text" name="q" value="Revature">
+        <input type="submit">
+    </form>
+</body>
+
+</html>

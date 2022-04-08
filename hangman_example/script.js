@@ -21,10 +21,10 @@ let word="TESTING";
 
     word = "Javascript"
 
-    [true, false, false, false, false, false, false, false, false, false]
+    [true, true, false, true, false, false, false, false, false, false]
 
     This translates to:
-    "J - - - - - - - - -"
+    "J a - a - - - - - -"
 */
 let revealedLetters = new Array(word.length);
 
@@ -63,24 +63,18 @@ function drawStrikeLetters() {
 
 // Manipulates the DOM to write the successfully guessed letters of the word, replacing them with dashes if not yet guessed
 function drawWordProgress() {
-    // Variable to display our word...
-	// we create an empty string and "build it" in the for-loop below
-    let display = "";
-    
     /*
-        Loop through revealed letters...if an element is false, we want to record a '-'
-        If the element is true we want to record the associated letter from our word...
-    */
-    for (let i = 0; i < revealedLetters.length; i++) {
-        if (revealedLetters[i] == true) {
-            display = display + word[i];
-        } else {
-            display = display + " _ ";
-        }
-    }
+        Create a variable that will display content to the webpage
 
-    // Display the contents to the webpage
-    document.getElementById("letter-display").innerHTML = display;
+        Loop through revealed letters...
+            IF revealedLetter index is true
+                Concantenate the current index of word to display variable
+            ELSE IF revealedLetter index is false 
+                Concatenate a blank " - " to the display variable
+
+        After Loop
+        Display variable to webpage (using document.getElementById to find where to put the data)
+    */
 }
 
 // Manipulates the DOM to update the image of the gallows for the current game state.
@@ -93,6 +87,7 @@ function drawGallows() {
         
         For example, to change the value of an element's 'type' attribute:
             document.getElementById("example-id").type = "New Type Value";
+            document.getElementById().setAttribute("src","value..");
     */
 }
 
@@ -101,47 +96,28 @@ function drawGallows() {
     processGuess should run each time the player guesses a letter.
 
     The processGuess function should:
-        Check if the guessed letter exists in our word.
-            if so...
-                update our revealedLetters array appropriately
-                render correctly guessed letters to page...
-            if not...
-                add the guessed letter to strikeLetters
-                render incorrect letters to page.
-                record that player got a strike
-        Please keep the flow of your program in mind!
+
 */
 document.getElementById("submit-btn").addEventListener("click", processGuess);
 
 function processGuess(eventData) {
     // this is required to prevent our form from submitting!
     eventData.preventDefault();
+    // value of an element on our webpage
     let guess = document.getElementById("guessed-letter").value.toUpperCase();
     
-    /* 
-     * Note, Javascript provides a simple, and built-in way to perform the 
-     * following, but we will explore this logic step-by-step
-     */
-    let letterExistInWord = false;
-    for (let i = 0; i < word.length; i++) {
-        // == and === comparisons
-        if (guess == word[i]){
-            revealedLetters[i] = true; // the corresponding letter was guessed correctly...
-            letterExistInWord = true;
-        }
-    }
+    /*
+        Check if the guessed letter exists in our word.
+        IF guess exists in our word
+            update our revealedLetters array appropriately
+            invoke drawWordProgress
+        ELSE
+            add the guess to strikeLetters
+            record that player got a strike
+            invoke drawStrikeLetters
+            invoke drawGallows
 
-    // using the logic from above...
-    if (letterExistInWord) {
-        // What to do if the letter exists in the word?
-		// This is where you should invoke the drawWordProgress function
-    } else {
-        // What do do if the letter does not exist in the word?
-		// There are a few steps here (note the following may not be in the exact order you want to perform them:
-		// invoke drawStrikeLetters function
-		// invoke drawGallows function
-		// increase strikes
-		// add the guessed letter (guess variable) to the 'strikeLetters' array
-		// hint regarding adding letters to 'strikeLetters' array: note that the number of strikes starts at 0 and you increase it each time you make a mistake...
-    }
+
+    Please keep the flow of your program in mind!
+    */
 }
