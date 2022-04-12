@@ -30,20 +30,11 @@ otherArr.fill("word"); // Now array looks like this: ["word","word","word","word
 console.log(otherArr);
 
 console.log("::: MULTI ARRAY :::");
-let multi = ["apple", 75, [true, "word", 89]];
+let multi = ["apple", 75, true];
 console.log(multi[0]);  // "apple"
 console.log(multi[1]);  // 75
-console.log(multi[2]);  // [true, "word", 89] - This is an array in another array
+console.log(multi[2]);  // true
 
-/* 
-    Since multi[2] is an array, we can reference information within that array using square bracket notation as well...
-*/
-console.log(multi[2][0]);       // true
-console.log(multi[2][1]);       // "word"
-console.log(multi[2][2]);       // 89
-multi[2].push("New Information");
-
-let otherMulti = [[1,2,3],[4,5,6],[7,8,9]];
 /* 
     Javascript allows us to expand arrays dynamically (after the array has been created)
 */

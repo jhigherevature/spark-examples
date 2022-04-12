@@ -10,9 +10,11 @@ let numWord = "10";
 let value = numWord * 5;
 console.log ("'10' * 5");
 console.log(value); // prints 50
+
 value = numWord / 5;
 console.log ("'10' / 5");
 console.log(value); // prints 2
+
 value = numWord - 5;
 console.log ("'10' - 5");
 console.log(value); // prints 5
