@@ -12,15 +12,14 @@ public class Simulator {
 	public static void main(String[] args) {
 		CustomMathOperations math = new CustomMathOperations();
 		try {
-			math.sumOddNumbers(2, 1);
-			math.sumDifferentNumbers(2, 4);
+//			int sum = math.sumOddNumbers(5, 2);
+			int sum = math.sumDifferentOddNumbers(2,5);
+			System.out.println(sum);
 		} catch (EvenNumberException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
-//			System.out.println("Ask the user for different input!");
 		} catch (DuplicateInputException e) {
 			e.printStackTrace();
+			System.out.println("You passed two of the same number, try not to do that!");
 		}
-//		math.sumDifferentOddNumbers(3, 3);
 	}
 }

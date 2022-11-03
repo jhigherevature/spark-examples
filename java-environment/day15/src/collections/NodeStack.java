@@ -20,12 +20,6 @@ public class NodeStack {
 		push(node);
 	}
 	
-	/*
-	 * 	B - top
-	 * 	|
-	 * 	\/
-	 * 	A
-	 */	
 	// Overloaded push method
 	public void push(Node node) {
 		/*

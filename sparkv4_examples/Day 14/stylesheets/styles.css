@@ -1,0 +1,18 @@
+* {
+    background-color: cadetblue;
+}
+
+p {
+    background-color: blue;
+    font-size: 40px;
+    color: white;
+}
+.myclass {
+    background-color: crimson;
+}
+.myotherclass {
+    background-color: rgb(109, 20, 109);
+}
+#myid {
+    background-color: darkolivegreen;
+}

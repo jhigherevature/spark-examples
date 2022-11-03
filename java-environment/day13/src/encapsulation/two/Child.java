@@ -13,14 +13,6 @@ public class Child extends Parent {
 	public static void main(String[] args) {
 		Parent p = new Parent();
 		System.out.println(p.pubString);
-		/*
-		 * We still get an error when trying to access
-		 * a protected field/method on a Parent object directly!
-		 * The protected access modifier gives access to 
-		 * a field as if we wrote the field within the 
-		 * child class! (think of it like "giving a private
-		 * field to the child")
-		 */
 //		System.out.println(p.proString);
 		
 		Child c = new Child();

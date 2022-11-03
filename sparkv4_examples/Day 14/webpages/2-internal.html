@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*  1. Create a few HTML elements to work with. 
+            2. Explain internal styling vs inline styling. 
+            3. Add in CSS Rules from least to most specific, changing the 
+            background color in each rule to demonstrate specificity.
+        */
+        * {
+            background-color: cadetblue;
+        }
+
+        p {
+            background-color: blue;
+            font-size: 40px;
+            color: white;
+        }
+        .myclass {
+            background-color: crimson;
+        }
+        #myid {
+            background-color: darkolivegreen;
+        }
+    </style>
+</head>
+<body>
+    <p>This is my paragraph.</p>
+    <p class="myclass">This is my paragraph.</p>
+    <div id="myid" class="myclass">This is my div</div>
+</body>
+</html>

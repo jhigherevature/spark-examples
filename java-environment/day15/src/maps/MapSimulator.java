@@ -26,7 +26,7 @@ public class MapSimulator {
 		hMap.put("Compile", 5);
 		hMap.put("DataStructure", 6);
 		hMap.put("Function", 7);
-		
+//		System.out.println(hMap);
 		/*
 		 * Iterations using keys - Set
 		 */
@@ -40,7 +40,7 @@ public class MapSimulator {
 		 */
 		System.out.println("Map - Values Loop");
 		for (Integer num : hMap.values()) {
-			System.out.println("Values: " + num);
+			System.out.println("Value is: " + num);
 		}
 
 		/*
@@ -50,5 +50,7 @@ public class MapSimulator {
 		for (Map.Entry<String, Integer> entry : hMap.entrySet()) {
 			System.out.println("Key: " + entry.getKey() + ", Value: " + entry.getValue());
 		}
+		
+		System.out.println(hMap);
 	}
 }

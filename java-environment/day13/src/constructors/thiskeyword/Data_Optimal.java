@@ -26,7 +26,12 @@ public class Data_Optimal {
 	public Data_Optimal (String name, double amount) {
 		System.out.println("Two argument constructor Called");
 		this.name = name;
-		this.amount = amount;
+		if (amount == 0.00) {
+			this.amount = 100.0;
+		} else {
+			this.amount = amount;
+		}
+		this.id = IdGenerator.generateId();
 		EventLogger.logObjectCreation(this);
 	}
 

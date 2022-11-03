@@ -1,6 +1,7 @@
 package polymorphism.polymorphicreferences;
 
 import polymorphism.methods.Book;
+import polymorphism.methods.Comic;
 import polymorphism.methods.Dictionary;
 import polymorphism.methods.Pamphlet;
 
@@ -14,7 +15,8 @@ public class Simulator {
 		// Create a parent class reference, using a child class
 		Book pamphlet = new Pamphlet("Why you should be a programmer", 1, "Because its so fun!");
 		Book dictionary = new Dictionary("Oxford Dictionary 3rd Edition", 1200);
-
+		Book book = new Comic("Marvel Comics", 100);
+		
 		pamphlet.read();
 		dictionary.read();
 		

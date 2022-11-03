@@ -2,6 +2,7 @@ package collections;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.PriorityQueue;
 import java.util.Queue;
@@ -30,8 +31,21 @@ public class CollectionSimulator {
 		alist.remove("Compile"); // remove an element
 		System.out.println(alist);
 		
+		/*
+		 * An enhanced for-loop is a looping structure in Java
+		 * that allows you to iterate over objects that implement
+		 * the Iterable interface at some point in it's inheritance
+		 * hierarchy. Since all Collection object inherit from
+		 * Iterable, you will be able to use an enhanced for-loop
+		 * with any of the Collection Objects.
+		 * 
+		 * Enhanced For-Loop Syntax:
+		 * for (Datatype varName : Collection) {
+		 * 		// Loop code
+		 * }
+		 */
 		for (String s : alist) {
-			System.out.println(s);
+			System.out.println(s.toUpperCase());
 		}
 	}
 	
@@ -52,16 +66,17 @@ public class CollectionSimulator {
 
 	public static void useQueue() {
 		System.out.println("::: QUEUES :::");
-		Queue<String> pQue = new PriorityQueue<String>();
-		pQue.add("Assembly");
-		pQue.add("Binary");
-		pQue.add("Compile");
-		pQue.add("Compile");
-		pQue.add("Compile");
-		pQue.add("DataStructure");
-		pQue.add("Function");
-		System.out.println(pQue);
-		pQue.poll();	// remove 'head' element
-		System.out.println(pQue);
+		Queue<String> lList = new LinkedList<String>();
+		System.out.println(lList.poll());	// remove 'head' element
+		lList.add("Assembly");
+		lList.add("Binary");
+		lList.add("Compile");
+		lList.add("Compile");
+		lList.add("Compile");
+		lList.add("DataStructure");
+		lList.add("Function");
+		System.out.println(lList);
+		lList.poll();	// remove 'head' element
+		System.out.println(lList);
 	}
 }

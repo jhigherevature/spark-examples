@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Box Model</title>
+    <!--    1. Creat some HTML elements for styling
+            2. Explain box model. Optionally show Dev Tools' CSS box model.
+            3. Apply changes to the border, padding, and margin.
+    -->
+    <style>
+        div {
+            background-color: aqua;
+        }
+
+        #target {
+            background-color: orange;
+            /*
+                You can independently change the size of box model properties sides by supplying a number of dimensions:
+                if you supply:
+                    1 dimension - all 4 sides
+                    2 dimensions - first = top and bottom | second= left and right
+                    3 dimensions - first = top | second = left and right | third = bottom
+                    4 dimentions - first = top | second = right | third = bottom | fourth = left
+            */
+
+            /* border-width: 5px 5px 5px 5px; */
+            /* border-style: solid; */
+            /* border-color: darkred; */
+
+            border: darkred 50px solid;
+            padding: 20px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>This is the second paragraph</p>
+        <p id="target">This paragraph shows off the Box Model</p>
+        <p>This is the third paragraph</p>
+    </div>
+</body>
+</html>

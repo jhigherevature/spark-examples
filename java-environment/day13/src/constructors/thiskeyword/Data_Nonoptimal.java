@@ -16,20 +16,23 @@ public class Data_Nonoptimal {
 		System.out.println("Two argument constructor Called");
 		this.name = name;
 		this.amount = amount;
+		this.id = IdGenerator.generateId();
 		EventLogger.logObjectCreation(this);
 	}
 
 	public Data_Nonoptimal (String name) {
 		System.out.println("Single argument constructor Called");
 		this.name = name;
-		this.amount = 0.00;
+		this.amount = 100.00;
 		EventLogger.logObjectCreation(this);
+		this.id = IdGenerator.generateId();
 	}
 	
 	public Data_Nonoptimal () {
 		System.out.println("No Argument Constructor Called");
 		this.name = "Default";
-		this.amount = 0.00;
+		this.amount = 100.00;
+		this.id = IdGenerator.generateId();
 		EventLogger.logObjectCreation(this);
 	}
 	

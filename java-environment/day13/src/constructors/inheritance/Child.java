@@ -18,13 +18,15 @@ package constructors.inheritance;
  * for a parent class.
  */
 public class Child extends Parent {
+	String favoriteToy;
 	public Child() {
 		// implicit behavior
 // 		super(); // error - Parent does not contain a no-args constructor
 		super("First", "Last");
 	}
 
-	public Child(String firstName, String lastName) {
+	public Child(String firstName, String lastName, String favoriteToy) {
 		super(firstName, lastName);
+		this.favoriteToy = favoriteToy;
 	}
 }

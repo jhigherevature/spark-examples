@@ -27,7 +27,7 @@ public class FinallySimulator {
 			 * 'normal exit', while any other non-zero
 			 * number represents an 'abnormal' exit.
 			 */
-//			System.exit(0);
+			System.exit(0);
 			e.printStackTrace();
 		} finally {
 			System.out.println("Notice that the Finally block will "

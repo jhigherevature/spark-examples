@@ -22,6 +22,10 @@ public class FinalVariables {
 		this.name = name;
 	}
 	
+	public FinalVariables() {
+		this("no name provided");
+	}
+	
 	public void errorsBelow() {
 		System.out.println("You cannot change the value"
 				+ " of 'name' or 'number'");

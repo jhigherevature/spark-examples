@@ -1,0 +1,10 @@
+-- CREATE
+CREATE TABLE student(
+	id INTEGER
+);
+
+-- ALTER
+ALTER TABLE student ADD COLUMN full_name VARCHAR(100);
+
+-- DROP
+DROP TABLE student;

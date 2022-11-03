@@ -13,6 +13,16 @@ public class Parent {
 	public String first_name;
 	public String last_name;
 	
+	// default / no-args constructor
+//	public Parent() { 
+//		super();
+//	}
+	
+	/*
+	 * Parameterized Constructor - takes two arguments:
+	 * 	arg0 - String first_name
+	 * 	arg1 - String last_name
+	 */
 	public Parent(String first_name, String last_name) {
 		this.first_name = first_name;
 		this.last_name = last_name;

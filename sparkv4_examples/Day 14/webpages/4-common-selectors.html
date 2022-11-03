@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--    1. Create some HTML elements for styling
+            2. Demonstrate some common selectors
+    -->
+    <style>
+        /* mutli-element selector */
+        h1, h2 {
+            background-color: lightblue;
+        }
+
+        /* descendant selector */
+        main p {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        /* direct child selector */
+        main > p {
+            font-size: 25px;
+        }
+
+        /* adjacent sibling selector */
+        p + p {
+            background-color: lightgray;
+        }
+
+        /* general sibling selector */
+        p ~ p {
+            background-color: lightpink;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Most Common Pets</h1>
+        <p>This article will give information about the most common pets in the US</p>
+        <p>Hopefully this information will give you a better idea about the different types of pets you can own.</p>
+        <section>
+            <h2>Dogs</h2>
+            <p>Dogs have a long association with people and have been selectively bred over millennia. They come in many breeds and can perform many roles.</p>
+
+            <h2>Cats</h2>
+            <p>Cats also have a long history with people and there are about 60 cat breeds in existence. Cats are just as loyal and affectionate as dogs, but they demonstrate their love in different ways.</p>
+
+            <h2>Fish</h2>
+            <p>Fish are popular because they simply require a large tank - but they do not need to go on walks and are relatively easier to care for than dogs and cats. </p>
+        </section>
+    </main>
+</body>
+</html>
